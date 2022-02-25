@@ -1,0 +1,26 @@
+
+{% extends 'farmer/farmer.html' %}
+{% block content %}
+<form action="#" method="post">
+	{% csrf_token %}
+	<div class="row">
+		<div class="col-md-6 contact-left">
+		   
+			<input type="text" name="Productname" placeholder="Your Productname" required pattern="[a-zA-Z\s]+"><br/><br/><br/>
+			<input type="text" name="testname" placeholder="testname" required><br/><br/><br/>
+			
+			<input type="file" name="file1" required><br/><br/><br/>
+			<input type="text" name="result" required placeholder="result"><br/><br/><br/>
+		</div>
+		<div class="col-md-6 contact-right mt-md-0 mt-4">
+			<textarea name="Description" placeholder="Description" required></textarea>
+			<button class="btn">Submit</button>
+		</div>
+	</div>
+</form>
+{% endblock %}
+
+    
+   
+
+

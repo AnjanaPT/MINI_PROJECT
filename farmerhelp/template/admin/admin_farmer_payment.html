@@ -1,0 +1,38 @@
+
+{% extends 'admin/adminbase.html' %}
+	{% block content %}
+    <h1 style="color: blue">Payment</h1>
+
+   
+        <table class="table" style="height:100%">
+        <tr><th>FarmersName</th><th>HouseName</th><th>State</th><th>District</th><th>Postoffice</th><th>PostalZipCode</th><th>email</th><th>phonenumber</th><th>proof</th><th>AccountNumber</th><th>NameoftheBank</th><th>IFSC</th></tr>
+    
+       
+        {% for x in rs %}
+        <tr>
+    
+    <td>{{x.1}}</td>
+    <td>{{x.2}}</td>
+    <td>{{x.3}}</td>
+    <td>{{x.4}}</td>
+    <td>{{x.5}}</td>
+    <td>{{x.6}}</td>
+    <td>{{x.7}}</td>
+    <td>{{x.8}}</td>
+    <td>{{x.9}}</td>
+    <td>{{x.10}}</td>
+    <td>{{x.11}}</td>
+    <td>{{x.12}}</td>
+    <td>{{x.13}}</td>
+    <td>{{x.14}}</td>
+    <td>{{x.15}}</td>
+    
+    <td><a href="/paymentaction/?id={{x.0}}">Paynow</a></td>
+</tr>
+
+{% endfor %}
+</table></center>
+{% endblock %}
+
+     
+    

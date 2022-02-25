@@ -1,0 +1,38 @@
+
+{% extends 'admin/adminbase.html' %}
+
+
+{% block content %}
+<br>
+<center><h1 style="color:red"> Approved</h1></center>
+<br>
+<center><table class="table">
+        <tr><th>ExpotrersName</th><th>RegistraionCode</th><th>Country</th><th>State</th><th>District</th><th>PhoneNumber</th><th>dates</th><th>file</th><th>email</th><th>password</th><th>AccountNumber</th><th>BankName</th><th>IFSC</th><th>status</th></tr>
+{% for x in res %}
+<tr>
+    
+    <td>{{x.1}}</td>
+    <td>{{x.2}}</td>
+    <td>{{x.3}}</td>
+    <td>{{x.4}}</td>
+    <td>{{x.5}}</td>
+    <td>{{x.6}}</td>
+    <td>{{x.7}}</td>
+    <td><img src="/static{{x.8}}"/></td>
+    
+    <td>{{x.9}}</td>
+    
+    <td>{{x.10}}</td>
+    <td>{{x.11}}</td>
+    <td>{{x.12}}</td>
+    <td>{{x.13}}</td>
+    <td>{{x.14}}</td>
+    <td>{{x.15}}</td>
+    
+</tr>
+
+{% endfor %}
+</table></center>
+<br>
+<br>
+{% endblock %}

@@ -1,0 +1,30 @@
+
+{% extends 'admin/adminbase.html' %}
+
+
+{% block content %}
+<center><h1 style="color:red"> Approval</h1></center>
+<center><table class="table">
+        <tr><th>Exporters Name</th><th>Country</th><th>State</th><th>PhoneNumber</th>
+            <th>District</th><th>orderid</th><th>dates</th><th>Productname</th><th>email</th>
+            <th>Quantity</th><th>Amount</th><th>Change</th></tr>
+{% for x in data %}
+<tr>
+    
+    <td>{{x.1}}</td>
+    <td>{{x.3}}</td>
+    <td>{{x.4}}</td>
+    <td>{{x.6}}</td>
+    <td>{{x.5}}</td>
+    <td>{{x.15}}</td>
+    <td>{{x.19}}</td>
+    <td>{{x.16}}</td>
+    <td>{{x.18}}</td>
+    <td>{{x.17}}</td>
+    <td>{{x.25}}</td>
+    <td><a href="/adminexportersorderview?id={{x.15}}">Approve</a></td>
+</tr>
+
+{% endfor %}
+</table></center>
+{% endblock  %}

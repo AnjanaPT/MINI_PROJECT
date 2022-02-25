@@ -1,0 +1,21 @@
+
+{% extends 'suppliers/suppliersbase.html' %}
+{% block content %}
+<form action="#" method="post">
+	{% csrf_token %}
+	<div class="row">
+        <div class="col-md-6 contact-left" style='text-align: center;margin-left:60px;'>
+          <h2 align="center" style="color: brown">Pesticide Details</h2>
+            <table align="center" class="table">
+                <tr><th>BookingNumber</th><th>itemCode</th><th>Date</th><th>email</th><th>Action</th></tr>
+		 {% for x in data %}  
+         <tr><td>{{ x.0}}</td><td>{{ x.1}}</td><td>{{ x.2}}</td><td>{{ x.3}}</td><td><a href="/suppliersviewpesticide?id={{x.0}}">Approve</a></td></tr>
+        {% endfor%}
+               
+            </table>
+		</div>
+		
+	</div>
+</form>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+
+{% extends 'admin/adminbase.html' %}
+        {% block content %}
+	<h1 style="color: blue">Specialized???????????</h1>
+        <form method="post">
+            {% csrf_token %}
+               
+                <div class="row">
+                    <div class="col-md-6 contact-left" style="margin-left:100px;margin-bottom:5px;">
+                        <b>farmerid</b><input type="text" name="farmerid" readonly style="margin-bottom:50px;" value="{{ res1.0 }}">
+                        <b>Accountnumber</b><input type="text" name="accountnumber" readonly style="margin-bottom:50px;" value="{{ res1.13 }}" pattern="[0-9]{10}">
+                        <b>bankname</b><input type="text" name="bankname" readonly style="margin-bottom:50px;" value="{{ res1.14 }}">
+                        <b>ifsccode</b><input type="text" name="ifsccode" readonly style="margin-bottom:50px;" value="{{ res1.15 }}"><br>
+                        
+                        <b>Amount</b><input type="text" name="Amount"  style="margin-bottom:50px;"><br>
+                        
+                        
+                    </div>
+                    <div class="col-md-6 contact-right mt-md-0 mt-4" style="margin-left:100px;">
+                        
+                        <input  type="submit" value="Submit" name="Submit">
+                    </div>
+                    </div>
+                    
+                </form>
+                
+            
+            
+            {% endblock %}

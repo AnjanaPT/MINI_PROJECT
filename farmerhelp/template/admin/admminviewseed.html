@@ -1,0 +1,34 @@
+
+{% extends 'admin/adminbase.html' %}
+
+
+{% block content %}
+<br>
+<center><h1 style="color:red"> Seed </h1></center>
+<br>
+<center><table class="table">
+        <tr><th>seedid</th><th>Name</th><th>Image</th><th>scientificname</th><th>verity</th><th>Rate</th><th>quantity</th><th>Description</th><th>unit</th><th>Email</th></tr>
+{% for x in res %}
+<tr>
+    <td>{{x.0}}</td>
+    <td>{{x.1}}</td>
+    
+    
+    <td><img src="/static{{x.2}}" height="100px"/></td>
+    
+    <td>{{x.3}}</td>
+    
+    <td>{{x.4}}</td>
+    <td>{{x.5}}</td>
+    <td>{{x.6}}</td>
+    <td>{{x.7}}</td>
+    <td>{{x.8}}</td>
+    <td>{{x.9}}</td>
+    
+</tr>
+
+{% endfor %}
+</table></center>
+<br>
+<br>
+{% endblock %}

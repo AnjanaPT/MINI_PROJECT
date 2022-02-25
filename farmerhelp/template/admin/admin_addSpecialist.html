@@ -1,0 +1,62 @@
+
+{% extends 'admin/adminbase.html' %}
+{% block content %}
+<h1 style="color: blue">Specialized</h1>
+<style>
+input[type="text"],input[type="email"], select {
+    border: 1px solid #ccc;
+    font-size: 1em;
+    color: #828282;
+    background: none;
+    width: 100%;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 15px 20px;
+    outline: none;
+}
+input[type="submit"]
+{
+    padding: .8em 1em;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 1em;
+    background: #009f4d;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    transition: 0.5s all;
+    outline: none;
+    margin: 1em 0 0;
+    border-radius: 0px;
+    width: 100%;
+    border: 1px solid #4caf50;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+</style>
+
+
+<div  class="col-md-6 contact-right mt-md-0 mt-4" style="margin-left:100px;margin-bottom:5px;">
+			
+				<form  method="post">
+				{% csrf_token %}
+				<input type="text" name="Name" placeholder="specialist Name" required style="margin-bottom:50px;color:#009f4d"  pattern="[a-zA-Z\s]+"/>
+				<input type="email" name="Email" placeholder="Email" required style="margin-bottom:50px;">
+				<input type="text" name="MobileNumber" placeholder="Mobile Number" required style="margin-bottom:50px;" pattern="[0-9]{10}">
+				<input type="text" name="OfficeName" placeholder="Office Name" required style="margin-bottom:50px;"><br>
+				
+				<input type="text" name="OfficeContact" placeholder="Office Contact" required style="margin-bottom:50px;" ><br>
+				<input type="text" name="Designation" placeholder="Designation" required style="margin-bottom:50px;"><br>
+				<input type="text" name="Specialized" placeholder="Specialized in" required style="margin-bottom:50px;"><br>
+				<textarea rows="10" cols="10" name="Message">Enter comments</textarea>
+				<input name="submit" value="Add" type="submit">
+			</form>
+
+
+		</div>
+			
+	
+{% endblock  %}

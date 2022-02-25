@@ -1,0 +1,63 @@
+
+{% extends 'admin/adminbase.html' %}
+{% block content %}
+<h1 style="color: blue"></h1>
+<style>
+	input[type="text"],input[type="email"], select {
+		border: 1px solid #ccc;
+		font-size: 1em;
+		color: #828282;
+		background: none;
+		width: 70%;
+		font-weight: 600;
+		letter-spacing: 1px;
+		margin-top:5px;
+		outline: none;
+	}
+	input[type="submit"]
+	{
+		padding: .8em 1em;
+		color: #fff;
+		font-weight: 600;
+		letter-spacing: 1px;
+		font-size: 1em;
+		background: #009f4d;
+		-webkit-transition: 0.5s all;
+		-moz-transition: 0.5s all;
+		-o-transition: 0.5s all;
+		-ms-transition: 0.5s all;
+		transition: 0.5s all;
+		outline: none;
+		margin: 1em 0 0;
+		border-radius: 0px;
+		width: 100%;
+		border: 1px solid #4caf50;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+	}
+	
+	</style>
+	
+		<div style="width:500px;height:700px;margin-left:500px;">
+            
+            
+                <form  method="post">
+                    {% csrf_token %}
+				<input type="text" name="Name" placeholder="investor Name" required style="margin-bottom:30px;"  pattern="[a-zA-Z\s]+"/>
+				<input type="email" name="Email" placeholder="Email" required style="margin-bottom:30px;">
+				<input type="text" name="MobileNumber" placeholder="Mobile Number" required  pattern="[0-9]{10}" style="margin-bottom:30px;">
+				<input type="text" name="OfficeName" placeholder="Office Name" required style="margin-bottom:30px;">
+				<input type="text" name="OfficeContact" placeholder="Office Contact" required style="margin-bottom:30px;" >
+				<input type="text" name="Designation" placeholder="Designation" required style="margin-bottom:30px;">
+				<input type="text" name="amount" placeholder="amount upto" required style="margin-bottom:30px;">
+				<textarea cols="50" rows="5" name="Message" placeholder="About Me" required style="margin-bottom:30px;"></textarea>
+                <input  type="submit">
+            </form>
+			
+
+			
+			
+       
+		</div>
+	
+{% endblock  %}

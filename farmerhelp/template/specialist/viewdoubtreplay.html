@@ -1,0 +1,29 @@
+
+{% extends 'specialist/specialistbase.html' %}
+{% block content %}
+{% if res %}
+    <form action="#" method="post">
+		{% csrf_token %}
+		
+		
+        <div class="row">
+            <div class="col-md-6 contact-left">
+               
+                <input type="text" name="Productname" placeholder="Your Productname" required value="{{ res.1 }}" pattern="[a-zA-Z\s]+"><br/><br/><br/>
+               
+				
+				<input type="text" name="dts"  required value="{{ res.3 }}"><br/><br/><br/>
+				<input type="text" name="email"  required value="{{ res.4 }}"><br/><br/><br/>
+			</div>
+            <div class="col-md-6 contact-right mt-md-0 mt-4">
+                <textarea name="doubt" placeholder="doubt" required>{{ res.2 }}</textarea>
+					
+				<textarea name="replay" placeholder="doubt" required>Add Replay</textarea>
+                <button class="btn">Submit</button>
+            </div>
+		</div>
+		
+    </form>
+	{% endif %}
+
+{% endblock %}

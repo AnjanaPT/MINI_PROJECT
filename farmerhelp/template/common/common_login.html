@@ -1,0 +1,69 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> Farmer reg </title>
+    <!-- Meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta  charset="utf-8" />
+    <meta name="keywords" content=" Tennis Online Register Form Form Responsive Widget, Audio and Video players, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design"
+      />
+    <script>
+      addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+    </script>
+    <!-- Meta tags -->
+    <!--stylesheets-->
+    <link href="{% static 'common/css/style.css'%}" rel='stylesheet' type='text/css' media="all">
+    <!--//style sheet end here-->
+    <link href="//fonts.googleapis.com/css?family=Saira+Condensed:400,500,600,700" rel="stylesheet">
+  </head>
+  <body>
+    <h1 class="header-w3ls">
+     Color Your Farm
+    </h1>
+    <div class="online-w3l-form">      
+      <div class="appointment-w3">
+        <form action="" method="post">
+          {% csrf_token %}
+          <div class="main">
+            <div class="form-left-w3l">
+              <input type="text" class="top-up" name="Username" placeholder="username" required>
+            </div>
+            <div class="form-left-w3l">
+              <input type="password" class="top-up" name="Password" placeholder="password" required>
+</div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+                 
+          
+          
+          <div class="btnn">
+            <input type="submit" value="Login">
+          </div>
+          
+        </form>
+
+        <div class="btnn">
+            <a href="{% url 'farmerreg' %}"><h3 style="color:white">New Farmer Register</h3></a> 
+          </div>
+          <div class="btnn">
+            <a href="{% url 'publicreg' %}"><h3 style="color:white">New Public Register</h3></a> 
+            
+          </div>
+          <div class="btnn">
+            <a href="{% url 'Exportersreg' %}"><h3 style="color:white">New Exporters Register</h3></a> 
+            
+          </div>
+          <div class="btnn">
+            <a href="{% url 'supplierreg' %}"><h3 style="color:white">New Suppliers Register</h3></a> 
+            
+          </div>
+      </div>
+    </div>
+    <div class="copy">
+    </div>
+  </body>
+</html>
+      

@@ -1,0 +1,30 @@
+
+{% extends 'admin/adminbase.html' %}
+
+
+{% block content %}
+<style>
+    .table{
+        width:100%;
+
+    }
+</style>
+    
+
+<center><h1 style="color:red"> View Public Profile</h1></center>
+<center><table class="table">
+        <tr><th>yourname</th><th>phonenumber</th><th>Username</th><th>Password</th></tr>
+{% for x in res %}
+<tr>
+    
+    <td>{{x.1}}</td>
+    <td>{{x.2}}</td>
+    <td>{{x.3}}</td>
+    <td>{{x.4}}</td>
+</tr>
+
+{% endfor %}
+</table></center>
+<br>
+<br>
+{% endblock %}

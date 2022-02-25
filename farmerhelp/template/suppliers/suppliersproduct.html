@@ -1,0 +1,89 @@
+
+{% extends 'suppliers/suppliersbase.html' %}
+{% block content %}
+<div style="text-align:center;margin-top:50PX;">
+<form action="#" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+<select name="Name"style="border: 1px solid #ccc;
+				font-size: 1em;
+				color: #828282;
+				background: none;
+				width:400px;;
+				font-weight: 600;
+				letter-spacing: 1px;
+				padding: 15px 20px;
+				outline: none;">
+                    {% for x in data %}
+                    <option>{{ x.1 }}</option>
+                    {% endfor %}
+
+                </select><br/><br/><br/>
+                
+                <select name="Category" style="border: 1px solid #ccc;
+				font-size: 1em;
+				color: #828282;
+				background: none;
+				width:400px;;
+				font-weight: 600;
+				letter-spacing: 1px;
+				padding: 15px 20px;
+				outline: none;">
+                <option  selected="" disabled="">Select Your Category</option>
+                <option >Pesticides</option>
+                <option >Equipments</option>
+                </select>
+<br/><br/><br/>
+               
+                <input type="text" name="PName" placeholder="Your Productname" required pattern="[a-zA-Z\s]+" style="border: 1px solid #ccc;
+				font-size: 1em;
+				color: #828282;
+				background: none;
+				width:400px;;
+				font-weight: 600;
+				letter-spacing: 1px;
+				padding: 15px 20px;
+				outline: none;"><br/><br/><br/>
+                <input type="file" name="file1"  required style="border: 1px solid #ccc;
+				font-size: 1em;
+				color: #828282;
+				background: none;
+				width:400px;;
+				font-weight: 600;
+				letter-spacing: 1px;
+				padding: 15px 20px;
+				outline: none;"><br/><br/><br/>
+                <input type="text" name="unit" placeholder="unit" required style="border: 1px solid #ccc;
+				font-size: 1em;
+				color: #828282;
+				background: none;
+				width:400px;;
+				font-weight: 600;
+				letter-spacing: 1px;
+				padding: 15px 20px;
+				outline: none;"><br/><br/><br/>
+                <input type="text" name="rate" placeholder="rate" required pattern="[0-9]+" style="border: 1px solid #ccc;
+				font-size: 1em;
+				color: #828282;
+				background: none;
+				width:400px;;
+				font-weight: 600;
+				letter-spacing: 1px;
+				padding: 15px 20px;
+				outline: none;"><br/><br/><br/>
+                <input type="text" name="quantity" placeholder="quantity" required style="border: 1px solid #ccc;
+				font-size: 1em;
+				color: #828282;
+				background: none;
+				width:400px;;
+				font-weight: 600;
+				letter-spacing: 1px;
+				padding: 15px 20px;
+				outline: none;"><br/><br/><br/>
+                <input type="submit" class="btn"/>
+            
+            
+        
+    </form>
+</div>
+	{% endblock %}
+

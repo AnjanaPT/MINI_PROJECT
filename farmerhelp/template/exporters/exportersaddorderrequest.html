@@ -1,0 +1,29 @@
+{% extends 'exporters/exportersbase.html' %}
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+        
+            <div style="text-align: center;">
+                <input type="text" class="gap" name="Productname" placeholder="Productname" required style="margin-bottom:50px;" pattern="[a-zA-Z\s]+"><br>
+                <input type="text" class="gap" name="Quantity" placeholder="Quantity" required style="margin-bottom:50px;" pattern="[0-9a-zA-Z\s]+"><br>
+                <input class="btn" type="submit">
+            </div>
+           
+      
+</form>
+<br>
+<ul>
+
+    <center><li><a href="/exporterspayment"><h3 style="position: relative;
+        display: inline-block;background-color: #4CAF50;
+				  color: white;
+				  padding: 16px;
+				  font-size: 16px;
+				  border: none;
+				  cursor: pointer;
+				  margin-left:20px;
+">Payment Now</h3></a></li></center>
+
+</ul>
+
+{% endblock %}

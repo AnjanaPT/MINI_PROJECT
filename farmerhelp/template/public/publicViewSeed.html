@@ -1,0 +1,31 @@
+
+{% extends 'public/public.html' %}
+{% block content %}
+<form action="#" method="post">
+	{% csrf_token %}
+	<div class="row">
+       
+        <div class="col-md-6 contact-left" style='text-align: center;margin-left:60px;'>
+            <h3><a href='/publicseedcart'>Cartview</a></h3>
+            <h2 align="center" style="color: brown">Seed Details</h2>
+            <br>
+            <br>
+            <table align="center">
+                <tr><td>
+		 {% for x in data %}  
+         <a href='/viewseedinfo?id={{x.0}}'> <img style="width: 200px; height: 200px;" src="/static{{x.2}}"></a><br>
+         <a href='/viewseedinfo?id={{x.0}}'>{{x.1}} </a>
+         <h3>{{ x.3}}</h3>
+         <h3>{{ x.4}}</h3>
+         <h3>{{ x.5}}</h3>
+         <h3>{{ x.7}}</h3>
+         <h3>{{ x.8}}</h3>
+                    {% endfor%}
+                </td></tr></table>
+               
+		</div>
+		
+	</div>
+</form>
+
+{% endblock %}

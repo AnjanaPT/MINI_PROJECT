@@ -1,0 +1,28 @@
+
+{% extends 'admin/adminbase.html' %}
+
+
+{% block content %}
+<br>
+<center><h1 style="color:red"> Approval</h1></center>
+<br>
+<center><table class="table">
+        <tr><th>Code</th><th>Name</th><th>Mobile</th><th>Amount</th><th>Email</th><th>Date</th></tr>
+{% for x in data %}
+<tr>
+    <td>{{x.0}}</td>
+    <td>{{x.1}}</td>
+    <td>{{x.2}}</td>
+    <td>{{x.3}}</td>
+    <td>{{x.4}}</td>
+    <td>{{x.5}}</td>
+    
+    
+    
+</tr>
+
+{% endfor %}
+</table></center>
+<br>
+<br>
+{% endblock %}

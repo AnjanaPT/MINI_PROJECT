@@ -1,0 +1,21 @@
+
+{% extends 'farmer/farmer.html' %}
+{% block content %}
+<form action="#" method="post">
+	{% csrf_token %}
+	<div class="row">
+        <div class="col-md-6 contact-left" style='text-align: center;margin-left:60px;'>
+          <h2 align="center" style="color: brown">farming Details</h2>
+            <table align="center" class="table">
+                <tr><th>followupid</th><th>itemname</th><th>techniquename</th><th>followups</th><th>email</th></tr>
+		 {% for x in data %}  
+         <tr><td>{{ x.0}}</td><td>{{ x.1}}</td><td>{{ x.2}}</td><td>{{ x.3}}</td><td>{{ x.4}}</td></tr>
+        {% endfor%}
+               
+            </table>
+		</div>
+		
+	</div>
+</form>
+
+{% endblock %}

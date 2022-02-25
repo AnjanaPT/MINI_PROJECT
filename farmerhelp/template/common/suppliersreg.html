@@ -1,0 +1,182 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> Farmer reg </title>
+    <!-- Meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta  charset="utf-8" />
+    <meta name="keywords" content=" Tennis Online Register Form Form Responsive Widget, Audio and Video players, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design"
+      />
+    <script>
+      addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+    </script>
+    <!-- Meta tags -->
+    <!--stylesheets-->
+    <link href="{% static 'common/css/style.css'%}" rel='stylesheet' type='text/css' media="all">
+    <!--//style sheet end here-->
+    <link href="//fonts.googleapis.com/css?family=Saira+Condensed:400,500,600,700" rel="stylesheet">
+  </head>
+  <body>
+    <h1 class="header-w3ls">
+     Suppliers Online Register
+    </h1>
+    <div class="online-w3l-form">  
+        
+        <div class="appointment-w3">
+            <form action="#" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+              <div class="main">
+                <div class="form-left-w3l">
+                       
+                        <input type="text" name="suppliersName" placeholder="Your Name"  required pattern="[a-zA-Z\s]+">
+                  
+                </div>
+                <div class="form-right-w3ls ">
+                        <input type="text"name="RegistraionCode" placeholder="Code" required>
+    
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+              <div class="main">
+               
+                <div class="form-right-w3ls ">
+                  <label><font color="white">District</font></label>
+                  <select name="District" style="border: 1px solid #ccc;
+                  font-size: 1em;
+                  color: #828282;
+                  background: none;
+                  width: 100%;
+                  font-weight: 600;
+                  letter-spacing: 1px;
+                  padding: 15px 20px;
+                  outline: none;">
+                          <option  selected="" disabled="">Select Your District</option>
+                          <option >Idukki</option>
+                          <option >Kottayam</option>
+                          <option >Ernakulam</option>
+                          <option >Kannur</option>
+                          <option >Kasargod</option>
+                          <option >Kollam</option>
+                          <option >Wayanad</option>
+                          <option >Malappuram</option>
+                          <option >Kozhikode</option>
+                          <option >Pathanamthitta</option>
+                          <option >Palakkadu</option>
+                          <option >Thiruvanathapuram</option>
+                          <option >Alappuzha</option>
+                          <option >Thrissur</option>
+
+                      </select>
+                                
+                         
+                  <div class="clearfix"></div>
+                </div>
+
+              </div>
+              <div class="form-right-w3ls ">
+                <label><font color="white">Category</font></label>
+                <select name="Category" style="border: 1px solid #ccc;
+                font-size: 1em;
+                color: #828282;
+                background: none;
+                width: 100%;
+                font-weight: 600;
+                letter-spacing: 1px;
+                padding: 15px 20px;
+                outline: none;">
+                <option  selected="" disabled="">Select Your Category</option>
+                <option >Pesticides</option>
+                <option >Equipments</option>
+                </select>
+                              
+                       
+                <div class="clearfix"></div>
+              </div>
+              <div class="form-add-w3ls">	
+                    <input type="text" name="PhoneNumber" placeholder="Phone Number" required pattern="[0-9]{10}">
+              </div>
+              <div class="main">
+                <div class="form-left-w3l">
+                       
+                </div>
+                <div class="form-right-w3ls ">
+                        <input type="file" name="uploads" placeholder="Authorisation letter" required>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+              <div class="main">
+                <div class="form-left-w3l">	
+                        <input type="email" name="email" placeholder="email" required>
+                </div>
+                
+                </div>
+              </div>
+              <div class="form-control-w3l">
+                    <input  name="password" type="password" placeholder="password"  required style="outline: none;
+                    padding: 12px 15px;
+                    color:#ccc;
+                    width: 68%;
+                    background: transparent;
+                    text-transform: capitalize;
+                    
+                    border:1px solid #ccc;
+                    letter-spacing: 2px;
+                    font-weight: 600;"/>
+              
+              <br/>
+              <div class="form-control-w3l"><br/><br/>
+                    <input type="text" name="AccountNumber" placeholder="Account Number" required style="outline: none;
+                    padding: 12px 15px;
+                    color: #ccc;
+                    width: 68%;
+                    background: transparent;
+                    text-transform: capitalize;
+                    
+                    border:1px solid #ccc;
+                    letter-spacing: 2px;
+                    font-weight: 600;" pattern="[0-9]{11}"/>
+              </div>
+              <br/>
+              <div class="form-control-w3l">
+                    <input type="text" name="BankName" placeholder="Bank Name" required style="outline: none;
+                    padding: 12px 15px;
+                    color: #ccc;
+                    width: 68%;
+                    background: transparent;
+                    text-transform: capitalize;
+                    
+                    border:1px solid #ccc;
+                    letter-spacing: 2px;
+                    font-weight: 600;">
+              </div><br/>
+              <div class="form-control-w3l">
+                    <input type="text" name="IFSC" placeholder="IFSC code" required style="outline: none;
+                    padding: 12px 15px;
+                    color: #ccc;
+                    width: 68%;
+                    background: transparent;
+                    text-transform: capitalize;
+                    
+                    border:1px solid #ccc;
+                    letter-spacing: 2px;
+                    font-weight: 600;" pattern="[a-zA-Z]{4}a-zA-Z0-9]{7}">
+              </div>
+              <br/>
+              <div class="btnn">
+                <input type="submit" value="Register">
+              </div>
+            </form>
+              <div class="btnn">
+                <!--<input type="submit" value="Go to Login">-->
+              </div>
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="copy">
+    </div>
+  </body>
+</html>

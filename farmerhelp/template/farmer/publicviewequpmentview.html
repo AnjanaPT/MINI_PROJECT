@@ -1,0 +1,23 @@
+
+{% extends 'farmer/farmer.html' %}
+{% block content %}
+<form action="#" method="post">
+	{% csrf_token %}
+	<div class="row">
+        <div class="col-md-6 contact-left" style='text-align: center;margin-left:60px;'>
+            <h3><a href='/publicequpmentcart'>Cartview</a></h3>
+            <h2 align="center" style="color: brown">Product Details</h2>
+            <br>
+            <br>
+            <table align="center">
+                <tr><td>
+		 {% for x in data %}  
+         {{ x.3 }} <br/><img style="width: 200px; height: 200px;" src="/static{{x.4}}">Unit{{ x.5}} <br/> rate{{ x.6}} <br/><a href='/viewequipmentinfo?id={{x.0}}'>Book</a><br/>
+                    {% endfor%}
+                </td></tr></table>
+		</div>
+		
+	</div>
+</form>
+
+{% endblock %}

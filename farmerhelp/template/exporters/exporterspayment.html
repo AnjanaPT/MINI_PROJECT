@@ -1,0 +1,51 @@
+
+{% extends 'exporters/exportersbase.html' %}
+
+    
+    
+        
+{% block addproductexp %}
+<style>
+    input[type="text"], input[type="date"] {
+    border: 1px solid #ccc;
+    font-size: 1em;
+    color: #828282;
+    background: none;
+    width: 100%;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 15px 20px;
+    outline: none;
+}
+</style>
+<form action="#" method="post">
+    {% csrf_token %}
+    <br>
+    <div class="row" style="width:100%">
+            <div class="col-md-6 contact-left" style="margin-left:100px;margin-bottom:5px;">
+    <h3 align="center" style="color: brown">Add Payment</h3>
+    <br>
+    <table align="center">
+    <tr>
+    
+<tr><td><input type="text" name="cardnumber" placeholder="Your cardnumber" required style="width:100%"></td></tr>
+<tr><td><input type="text" name="cvv" placeholder="cvv" required></td></tr>
+<tr><td><input type="text" name="accountnumber" placeholder="Accountnumber" required></td></tr>
+<tr><td><input type="text" name="ifsc" placeholder="ifsc" required></td></tr>
+<tr><td><input type="text" name="amount" placeholder="amount" required></td></tr>
+<tr><td> <input type="date" name="dates" placeholder="Order date" required></td></tr>
+
+
+
+
+
+</table>  
+</div>
+<div class="col-md-6 contact-right mt-md-0 mt-4" style="margin-left:100px;">
+    
+    <button class="btn">Submit</button>
+</div>
+</div>
+</form>
+{% endblock %}
+

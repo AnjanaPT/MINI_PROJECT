@@ -1,0 +1,79 @@
+
+{% extends 'farmer/farmer.html' %}
+
+    
+    
+        
+{% block content %}
+<style>
+		input[type="text"],input[type="email"],input[type="date"], textarea {
+			border: 1px solid #ccc;
+			font-size: 1em;
+			color: #828282;
+			background: none;
+			width: 50%;
+			font-weight: 600;
+			letter-spacing: 1px;
+			padding: 15px 20px;
+			outline: none;
+			margin-left: 50px;
+		}
+		input[type="submit"]
+		{
+			padding: .8em 1em;
+			color: #fff;
+			font-weight: 600;
+			letter-spacing: 1px;
+			font-size: 1em;
+			background: #009f4d;
+			-webkit-transition: 0.5s all;
+			-moz-transition: 0.5s all;
+			-o-transition: 0.5s all;
+			-ms-transition: 0.5s all;
+			transition: 0.5s all;
+			outline: none;
+			margin: 1em 0 0;
+			border-radius: 0px;
+			width: 50%;
+			border: 1px solid #4caf50;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			margin-left: 50px;
+		}
+		
+		</style>
+<form action="#" method="post">
+    {% csrf_token %}
+    
+    <br>
+    <div class="row" style="width:100%">
+        {% for x in res %}
+
+            <div class="col-md-6 contact-left" style="margin-left:100px;margin-bottom:5px;">
+    <h3 align="center" style="color: brown">Add Payment</h3>
+    <br>
+    <table align="center">
+    <tr>
+    
+<tr><td><input type="text" name="cardnumber" placeholder="Your cardnumber" required ></td></tr>
+<tr><td><input type="text" name="cvv" placeholder="cvv" required></td></tr>
+<tr><td><input type="text" name="accountnumber" placeholder="Accountnumber" required></td></tr>
+<tr><td><input type="text" name="ifsc" placeholder="ifsc" required></td></tr>
+<tr><td><input type="text" name="amount" placeholder="amount" required readonly value="{{ x.0 }}"></td></tr>
+<tr><td> <input type="date" name="dates" placeholder="Order date" required style="width:100%"></td></tr>
+
+{% endfor %}
+
+
+
+
+</table>  
+</div>
+<div class="col-md-6 contact-right mt-md-0 mt-4" style="margin-left:100px;">
+    
+    <input  class="btn" type="submit" name="pay">
+</div>
+</div>
+</form>
+{% endblock %}
+

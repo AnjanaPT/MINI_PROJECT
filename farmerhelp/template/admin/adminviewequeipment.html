@@ -1,0 +1,35 @@
+
+{% extends 'admin/adminbase.html' %}
+
+
+{% block content %}
+<br>
+<center><h1 style="color:red"> Pesticide and Equipments </h1></center>
+<br>
+<center><table class="table">
+        <tr><th>productid</th><th>suppliername</th><th>category</th><th>productname</th><th>Image</th><th>unit</th><th>Rate</th><th>quantity</th><th>Email</th></tr>
+{% for x in res %}
+<tr>
+    <td>{{x.0}}</td>
+    <td>{{x.1}}</td>
+    
+    
+    
+    
+    <td>{{x.2}}</td>
+    
+    <td>{{x.3}}</td>
+    <td><img src="/static{{x.4}}" height="100px"/></td>
+    <td>{{x.5}}</td>
+    <td>{{x.6}}</td>
+    <td>{{x.7}}</td>
+    <td>{{x.8}}</td>
+    
+    
+</tr>
+
+{% endfor %}
+</table></center>
+<br>
+<br>
+{% endblock %}

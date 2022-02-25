@@ -1,0 +1,32 @@
+
+{% extends 'admin/adminbase.html' %}
+
+
+{% block content %}
+<br>
+<center><h1 style="color:red"> Product </h1></center>
+<br>
+<center><table class="table">
+        <tr><th>productid</th><th>cat</th><th>productname</th><th>Image</th><th>unit</th><th>Rate</th><th>quantity</th><th>Email</th></tr>
+{% for x in res %}
+<tr>
+    <td>{{x.0}}</td>
+    <td>{{x.1}}</td>
+    <td>{{x.2}}</td>
+    
+    <td><img src="/static{{x.3}}" height="100px"/></td>
+    
+    <td>{{x.4}}</td>
+    
+    <td>{{x.5}}</td>
+    <td>{{x.6}}</td>
+    <td>{{x.7}}</td>
+    
+    
+</tr>
+
+{% endfor %}
+</table></center>
+<br>
+<br>
+{% endblock %}

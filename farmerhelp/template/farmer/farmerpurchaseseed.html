@@ -1,0 +1,58 @@
+
+{% extends 'farmer/farmer.html' %}
+{% block content %}
+<style>
+		input[type="text"],input[type="email"],input[type="password"], textarea {
+			border: 1px solid #ccc;
+			font-size: 1em;
+			color: #828282;
+			background: none;
+			width: 50%;
+			font-weight: 600;
+			letter-spacing: 1px;
+			padding: 15px 20px;
+			outline: none;
+			margin-left: 50px;
+		}
+		input[type="submit"]
+		{
+			padding: .8em 1em;
+			color: #fff;
+			font-weight: 600;
+			letter-spacing: 1px;
+			font-size: 1em;
+			background: #009f4d;
+			-webkit-transition: 0.5s all;
+			-moz-transition: 0.5s all;
+			-o-transition: 0.5s all;
+			-ms-transition: 0.5s all;
+			transition: 0.5s all;
+			outline: none;
+			margin: 1em 0 0;
+			border-radius: 0px;
+			width: 50%;
+			border: 1px solid #4caf50;
+			letter-spacing: 2px;
+			text-transform: uppercase;
+			margin-left: 50px;
+		}
+		
+		</style>
+<form action="#" method="post" enctype="multipart/form-data">
+	{% csrf_token %}
+	<div class="row">
+		<div class="col-md-6 contact-left" >
+		   
+			<input type="text" name="Name" placeholder="id" required value="{{id}}"><br/><br/><br/>
+			<input type="text" name="scientificname" placeholder="category" required value="{{ca}}"><br/><br/><br/>
+            <input type="text" name="quantity" placeholder="quantity" required><br/><br/><br/>
+
+			
+		</div>
+		<div class="col-md-6 contact-right mt-md-0 mt-4"></div>
+			
+			<input type="Submit" name="add" value="Submit">
+		</div>
+	</div>
+</form>
+{% endblock %}

@@ -1,0 +1,30 @@
+
+{% extends 'public/public.html' %}
+{% block content %}
+<form action="#" method="post">
+	{% csrf_token %}
+	<div class="row">
+		<div class="col-md-6 contact-left" style='text-align: center;margin-left:60px;'>
+            <h2 align="center" style="color: brown">Cart Details</h2>
+            <br>
+            <br>
+            <table align="center" class="table">
+            <th>CartNumber</th><th>Seedcode</th><th>images</th><th>dates</th><th>Action</th>
+                <tr><td>
+         {% for x in res %} 
+         <tr><td>{{ x.10 }}</td><td>{{ x.11 }}</td><td><img src="/static{{ x.2 }}" width="100px" height="100px"/></td><td>{{ x.12 }}</td><td><a href='/farmerseedcart?id={{x.0}}'>Delete </a></td></tr>
+         
+        
+         
+         
+                    {% endfor%}
+               </table>
+               <form method="post">
+                <input type="submit" value="checkout" name="checkout"/>
+                </form>
+		</div>
+		
+	</div>
+</form>
+
+{% endblock %}
